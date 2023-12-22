@@ -21,6 +21,8 @@ def back_space():
     pantalla.insert(0, b[:-1])
 
 calculadora = tk.Tk()
+calculadora.title("Calculadora")
+calculadora.config(padx= 10, pady= 10)
 
 style = ttk.Style()
 style.configure('pantalla.TEntry', bg='#000000')
