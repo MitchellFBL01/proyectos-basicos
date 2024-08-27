@@ -11,12 +11,13 @@ def reinicio():
     numeroONo = randint(1, 101)
     reset = "Adivina el número entre 1 y 100"
     textwin.set(reset)
-    conteo = 10
+    conteo = 5
     cotadorVar.set(f"Intento número {conteo}")
+    resultado.config(style= "black.TLabel")
     return numeroONo, conteo
 
 numero = crar_numero()
-conteo = 10
+conteo = 5
 def intento(x):
     global conteo
     respuesta = None
@@ -24,7 +25,7 @@ def intento(x):
         x = int(x)
     except TypeError: # Si ocurre un error de tipo
         respuesta = "¡¡ERROR!! \nDebes ingresar un número"
-    if 1 < conteo <= 10:
+    if 1 < conteo <= 5:
 
         if isinstance(x, int):
             if x == numero:
